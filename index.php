@@ -42,10 +42,34 @@
 
 ?>
 
-<ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Hotels</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Voto</th>
+      <th scope="col">Distanza dal centro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
     <?php foreach ( $hotels as $hotel) { ?>
-        <li>
-                <?php echo $hotel['name'] . ' - ' . $hotel['description']. ' - voto ' . $hotel['vote'] . ' - distanza:' . $hotel['distance_to_center']; ?>
-        </li>
-    <?php } ?>
-</ul>
+      <td scope="row"> <?php echo $hotel['name']?></td>
+      <td> <?php echo $hotel['description']?></td>; 
+      <td> <?php echo $hotel['vote']?></td>
+      <td> <?php echo $hotel['distance_to_center']?></td>
+      <?php } ?>
+    </tr>
+</table>
