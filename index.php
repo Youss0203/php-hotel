@@ -52,9 +52,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <body>
-
-
-<table class="table">
+  <table class="table">
   <thead>
     <tr>
       <th scope="col">Nome</th>
@@ -66,10 +64,12 @@
   <tbody>
     <tr >
     <?php foreach ( $hotels as $hotel) { ?>
+        <tr>
       <td scope="row"> <?php echo $hotel['name']?></td>
       <td> <?php echo $hotel['description']?></td>; 
       <td> <?php echo $hotel['vote']?></td>
       <td> <?php echo $hotel['distance_to_center']?></td>
+      </tr>
       <?php } ?>
     </tr>
 </table>
